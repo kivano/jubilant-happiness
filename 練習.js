@@ -1,17 +1,18 @@
-$(function(){
-	var english =["hair dryer","blinker","plastic bottle","laptop","gas station","flip flop"];
-	english[0] = "hair dryer";
-	english[1] = "blinker";
-	english[2] = "plastic bottle";
-	english[3] = "laptop";
-	english[4] = "gas station";
-	english[5] = "flip flop";
+// variable used for getting english answers
+// 英語を得るための文字列
+var english =["hair dryer","blinker","plastic bottle","laptop","gas station","flip flop"];
 
-	$("#getbutton").click(function(){
+// variable used for identifying position in table
+// どの列に英語を書くかを判別するための文字列
+var ids = ["#hairdryer", "#blinker", "#pet", "#laptop", "#gasstation", "#flipflop"]
+
+
+// Function used for showing English
+// 英語を表示する関数
+function showEnglish(x) {
 	//document.writeln("Hair Dryer");
-          $("#hairdryer").html(answer(x))
-          });
-});
+  $(ids[x]).html(answer(x))
+}
 function answer(n){
 	var vocab =english[n];
 	return vocab;
