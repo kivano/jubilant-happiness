@@ -9,6 +9,10 @@ $(function(){
 
 	$("#getbutton").click(function(){
 	//document.writeln("Hair Dryer");
-          $("#hairdryer").html(english[0])
+          $("#hairdryer").html(answer(x))
           });
 });
+function answer(n){
+	var vocab =english[n];
+	return vocab;
+}
